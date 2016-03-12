@@ -17,8 +17,8 @@ function factory(classify) {
    * the `RegExp()` constructor to create a regular expression object (for
    * example, `matches(new RegExp(aRegExpString), aValue)`).
    *
-   * @param {(RegExp|*)} - The regular expression (or any value, which will be
-   *     converted to a regular expression) to compare with `value`.
+   * @param {(RegExp|*)} regexp - The regular expression (or any value, which
+   *     will be converted to a regular expression) to compare with `value`.
    * @param {*} value - The value to compare with `regexp`.
    *
    * @return {!boolean} `true` if `value` matches `regexp`; `false` otherwise.
