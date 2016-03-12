@@ -1,2 +1,2 @@
-# match
-Test whether `value` matches `regexp` (a value that will be converted to a `RegExp` object if necessary).
+# matches
+Test whether an arbitrary value (converted to a `RegExp` object if necessary) `regexp` matches a (possibly coerced) string `value`.

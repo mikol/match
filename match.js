@@ -15,15 +15,15 @@ function factory(classify) {
    * converted to a regular expression object. If `regexp` is already a regular
    * expression pattern in the form of a string and should not be escaped, use
    * the `RegExp()` constructor to create a regular expression object (for
-   * example, `match(aValue, new RegExp(aRegExpString))`).
+   * example, `match(new RegExp(aRegExpString), aValue)`).
    *
-   * @param {*} value - The value to test for a match with `regexp`.
    * @param {(RegExp|*)} - The regular expression (or any value, which will be
    *     converted to a regular expression) to test `value` for a match.
+   * @param {*} value - The value to test for a match with `regexp`.
    *
    * @return {!boolean} `true` if `value` matches `regexp`; `false` otherwise.
    */
-  return function match(value, regexp) {
+  return function matches(regexp, value) {
     if (classify(regexp) !== 'regexp') {
       regexp = new RegExp((regexp + '').replace(/[\\^$*+?.()|[\]{}]/g, '\\$&'));
     }

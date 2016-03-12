@@ -3,77 +3,77 @@
 require('criteria'); /* globals scope, test */
 
 var is = require('is');
-var match = require('../match');
+var matches = require('../match');
 
-scope('`match()` matches correctly.',
+scope('`matches()` matches correctly.',
 function () {
   test('Works without any arguments.',
   function (must) {
     must.true(function () {
-      return match();
+      return matches();
     });
   });
 
   test("'' matches `new String()`.",
   function (must) {
     must.true(function () {
-      return match('', new String());
+      return matches(new String(), '');
     });
   });
 
   test("`true` matches 'true'.",
   function (must) {
     must.true(function () {
-      return match(true, 'true');
+      return matches('true', true);
     });
   });
 
   test("`true` does not match /^ true $/.",
   function (must) {
     must.true(function () {
-      return !match(true, /^ true $/);
+      return !matches(/^ true $/, true);
     });
   });
 
   test("`false` matches /^false$/.",
   function (must) {
     must.true(function () {
-      return match(false, /^false$/);
+      return matches(/^false$/, false);
     });
   });
 
   test("'foo bar biz baz' matches 'bar'.",
   function (must) {
     must.true(function () {
-      return match('foo bar biz baz', 'bar');
+      return matches('bar', 'foo bar biz baz');
     });
   });
 
   test("'foo biz baz' does not match 'bar'.",
   function (must) {
     must.true(function () {
-      return !match('foo biz baz', 'bar');
+      return !matches('bar', 'foo biz baz');
     });
   });
 
   test("'Format ${0} text' matches /[\\^$*+?.()|[\]{}]/.",
   function (must) {
     must.true(function () {
-      return match('Format ${0} string.', /[\\^$*+?.()|[\]{}]/);
+      return matches(/[\\^$*+?.()|[\]{}]/, 'Format ${0} string.');
     });
   });
 
   test("'Format %c text' does not match /[\\^$*+?.()|[\]{}]/.",
   function (must) {
     must.true(function () {
-      return !match('Format %c text', /[\\^$*+?.()|[\]{}]/);
+      return !matches(/[\\^$*+?.()|[\]{}]/, 'Format %c text');
     });
   });
 
   test("`{}.constructor` matches `Object`.",
   function (must) {
     must.true(function () {
-      return match({}.constructor, Object);
+      return matches(Object, {}.constructor);
     });
   });
 });

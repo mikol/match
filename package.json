@@ -1,14 +1,14 @@
 {
-  "name": "match",
-  "version": "0.0.1",
-  "description": "Test whether `value` matches `regexp` (a value that will be converted to a `RegExp` object if necessary).",
+  "name": "matches",
+  "version": "0.0.2",
+  "description": "Test whether an arbitrary value (converted to a `RegExp` object if necessary) `regexp` matches a (possibly coerced) string `value`.",
   "main": "match.js",
   "scripts": {
     "test": "./node_modules/criteria/bin/criteria test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikol/match.git"
+    "url": "git+https://github.com/mikol/matches.git"
   },
   "keywords": [
     "anything",
@@ -24,9 +24,9 @@
   },
   "license": "CC-BY-SA-4.0",
   "bugs": {
-    "url": "https://github.com/mikol/match/issues"
+    "url": "https://github.com/mikol/matches/issues"
   },
-  "homepage": "https://github.com/mikol/match#readme",
+  "homepage": "https://github.com/mikol/matches#readme",
   "devDependencies": {
     "criteria": "git+https://github.com/mikol/criteria.git"
   }
