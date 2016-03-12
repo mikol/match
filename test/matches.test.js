@@ -3,7 +3,7 @@
 require('criteria'); /* globals scope, test */
 
 var is = require('is');
-var matches = require('../match');
+var matches = require('../matches');
 
 scope('`matches()` matches correctly.',
 function () {

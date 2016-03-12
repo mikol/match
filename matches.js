@@ -4,7 +4,7 @@
 
 'use strict';
 
-var id = 'match';
+var id = 'matches';
 var dependencies = ['classify'];
 
 function factory(classify) {
@@ -15,11 +15,11 @@ function factory(classify) {
    * converted to a regular expression object. If `regexp` is already a regular
    * expression pattern in the form of a string and should not be escaped, use
    * the `RegExp()` constructor to create a regular expression object (for
-   * example, `match(new RegExp(aRegExpString), aValue)`).
+   * example, `matches(new RegExp(aRegExpString), aValue)`).
    *
    * @param {(RegExp|*)} - The regular expression (or any value, which will be
-   *     converted to a regular expression) to test `value` for a match.
-   * @param {*} value - The value to test for a match with `regexp`.
+   *     converted to a regular expression) to compare with `value`.
+   * @param {*} value - The value to compare with `regexp`.
    *
    * @return {!boolean} `true` if `value` matches `regexp`; `false` otherwise.
    */

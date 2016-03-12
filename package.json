@@ -2,7 +2,7 @@
   "name": "matches",
   "version": "0.0.2",
   "description": "Test whether an arbitrary value (converted to a `RegExp` object if necessary) `regexp` matches a (possibly coerced) string `value`.",
-  "main": "match.js",
+  "main": "matches.js",
   "scripts": {
     "test": "./node_modules/criteria/bin/criteria test"
   },
